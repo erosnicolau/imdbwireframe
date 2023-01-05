@@ -1,9 +1,12 @@
 import './App.css';
+import Header from '../Header/Header';
 
 export default function App(props) {
+  const name = 'IMDB Wireframe';
+
   return (
     <div className="App">
-      <h1>Starting here</h1>
+      <Header name={name} />
     </div>
   );
 }
