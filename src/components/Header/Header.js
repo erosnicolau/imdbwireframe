@@ -1,6 +1,6 @@
 import './header.css';
-import Nav from '../Nav/Nav';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 export default function Header(props) {
   return (
@@ -8,7 +8,7 @@ export default function Header(props) {
       <h1>
         <Link to="/">{props.name}</Link>
       </h1>
-      <Nav />
+      <Navbar />
     </header>
   );
 }
