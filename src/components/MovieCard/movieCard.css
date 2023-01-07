@@ -1,0 +1,10 @@
+.movieCard {
+    border: solid 1px white;
+    border-radius: 1rem;
+    background-color: #eee;
+    color: black;
+    padding: 1rem .5rem;
+    text-align: center;
+}
+
+h1 { font-size: 1rem;}
