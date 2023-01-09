@@ -5,6 +5,31 @@
     color: black;
     padding: 1rem .5rem;
     text-align: center;
+    position: relative;
 }
 
 h1 { font-size: 1rem;}
+
+.fave {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 3rem;
+    display: inline-block;
+    line-height: 2rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 50%;
+    border: solid 1px pink;
+    color: pink;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+}
+.fave:before {
+    content: '\2661'
+}
+
+.fave.faved:before {
+    content: '\2665'
+}

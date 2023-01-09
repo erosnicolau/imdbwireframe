@@ -5,18 +5,33 @@ import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 export default function Main(props) {
-  const { pathname } = useLocation();
+  //const { pathname } = useLocation();
   const { keyword } = props;
   const [movies, setMovies] = useState([]);
-  const [favorites, setFavorites] = useState([]);
+  const [faves, setFaves] = useState(JSON.parse(localStorage.getItem('favoriteIds')) || []);
+
+  const toggleFavorite = (id) => {
+    const updatedMovies = movies.map((movie) => {
+      if (movie.id === id) {
+        return { ...movie, isFavorite: !movie.isFavorite };
+      }
+      return movie;
+    });
+    setMovies(updatedMovies);
+
+    setFaves((prevFaves) => {
+      if (prevFaves.includes(id)) {
+        return prevFaves.filter((favoriteId) => favoriteId !== id);
+      } else {
+        return [...prevFaves, id];
+      }
+    });
+  };
 
   useEffect(() => {
     if(keyword !== ''){
-      console.log('search for: ', keyword, '!');
       searchMovies(keyword, 1).then(response => {
-        console.log(response.results);
         setMovies(response.results);
-        return;
       });
     } else {
       getMovies(1).then(response => {
@@ -25,15 +40,20 @@ export default function Main(props) {
     }
   }, [keyword]);
 
+  useEffect(() => {
+    localStorage.setItem('favoriteIds', JSON.stringify(faves));
+  }, [faves]);
+
+
   return (
     <div className="mainContent">
       <Switch>
         <Route path="/">
-          <MovieList list={movies} />
+          <MovieList movies={movies} faves={faves} toggleFavorite={toggleFavorite} />
         </Route>
 
         <Route path="/favorites">
-          <MovieList list={favorites} />
+          <MovieList movies={movies} faves={faves} toggleFavorite={toggleFavorite} />
         </Route>
 
         <Redirect to="/" />
