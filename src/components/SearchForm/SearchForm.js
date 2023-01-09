@@ -7,7 +7,6 @@ export default function SearchForm(props) {
 
   function submitted(ev) {
     ev.preventDefault();
-    console.log('submitted');
     saveSearch(inputRef.current.value);
   }
 
