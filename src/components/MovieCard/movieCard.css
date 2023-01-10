@@ -1,40 +1,49 @@
 .movieCard {
-    border: solid 1px white;
-    border-radius: 1rem;
-    background-color: #eee;
-    color: black;
-    padding: 1rem .5rem .5rem;
-    text-align: center;
-    position: relative;
+  border: solid 1px white;
+  border-radius: 1rem;
+  background-color: #eee;
+  color: black;
+  padding: 1rem 0.5rem 0.5rem;
+  text-align: center;
+  position: relative;
 }
 
-h1 { font-size: 1rem;}
+.movieCard h1 {
+  font-size: 1rem;
+}
 
 .fave {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 3rem;
-    display: inline-block;
-    line-height: 2rem;
-    padding: 0.5rem;
-    background: white;
-    border-radius: 50%;
-    border: solid 1px pink;
-    color: pink;
-    width: 3rem;
-    height: 3rem;
-    overflow: hidden;
+  position: absolute;
+  right: -.5rem;
+  top: -.5rem;
+  font-size: 3rem;
+  display: inline-block;
+  line-height: 2rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 50%;
+  border: solid 1px pink;
+  color: pink;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
 }
+
 .fave:before {
-    content: '\2661'
+  content: "\2661";
 }
 
 .fave.faved:before {
-    content: '\2665'
+  content: "\2665";
 }
 
 .releaseDate {
-    font-size: .75rem;
-    color: gray;
+  font-size: 0.75rem;
+  color: gray;
+}
+
+@media (min-width: 600px) {
+  .movieCard h1 {
+    font-size: 1.25rem;
+  }
 }

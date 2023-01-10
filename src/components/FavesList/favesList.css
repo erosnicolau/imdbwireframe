@@ -1,9 +1,9 @@
 .favesWrapper {
-    text-align: center;
+  text-align: center;
 }
 .favesList {
-    margin: 2rem 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    grid-gap: 1rem;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-gap: 1rem;
 }

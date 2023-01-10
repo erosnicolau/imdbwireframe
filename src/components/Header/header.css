@@ -1,6 +1,6 @@
 .head {
   width: 100%;
-  padding: 0 2rem;
+  padding: 0.5rem 1rem;
   background-color: #111;
   color: #fff;
   display: flex;
@@ -9,19 +9,37 @@
   align-items: center;
   position: relative;
   top: 0;
-  left: -2rem;
+  left: -1rem;
 }
-.head > h1 {
+h1 {
   flex-basis: 30vw;
   flex-grow: 0;
   flex-shrink: 1;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 h1 > a {
   color: #fff;
   text-decoration: none;
 }
 .navbar {
-  flex-basis: 35vw;
+  flex-basis: 65vw;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+  .navbar {
+    flex-basis: 35vw;
+  }
+  .head {
+    padding: 0.5rem 2rem;
+    left: -2rem;
+  }
+}
+@media (min-width: 1281px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }

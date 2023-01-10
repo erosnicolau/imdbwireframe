@@ -1,6 +1,6 @@
 .movieList {
-    margin: 2rem 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    grid-gap: 1rem;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-gap: 1rem;
 }

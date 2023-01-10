@@ -1,17 +1,43 @@
-.searchBar {
-    text-align: center;
-    padding: 1rem;
+.searchBar,
+input,
+button {
+  padding: .5rem .25rem;
+
 }
 
-input, button {
-    border: none;
-    padding: 1rem;
-    font-size: 1rem;
+.searchBar {
+  text-align: center;
 }
+
+input,
+button {
+  border: none;
+  font-size: .75rem;
+}
+
 input {
-    border-radius: 1rem 0 0 1rem;
+  border-radius: 1rem 0 0 1rem;
+  width: 80px;
+  padding-inline: 1rem;
 }
-button[type=reset] {
-    border-radius: 0 1rem 1rem 0;
-    border-left: solid white;
+
+button[type="reset"] {
+  border-radius: 0 1rem 1rem 0;
+  border-left: solid white;
+  padding-inline-end: 1rem;
+}
+
+@media (min-width: 600px) {
+  .searchBar, input, button {
+    padding: 1rem .5rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1281px) {
+  .searchBar, input, button {
+    padding: 1rem;
+  }
+  input {
+    width: auto;
+  }
 }
