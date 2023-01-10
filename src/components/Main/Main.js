@@ -1,5 +1,6 @@
 import './main.css';
 import MovieList from '../MovieList/MovieList';
+import FavesList from '../FavesList/FavesList';
 import { getMovies, searchMovies } from '../../api';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -48,12 +49,12 @@ export default function Main(props) {
   return (
     <div className="mainContent">
       <Switch>
-        <Route path="/">
+        <Route path="/" exact>
           <MovieList movies={movies} faves={faves} toggleFavorite={toggleFavorite} />
         </Route>
 
         <Route path="/favorites">
-          <MovieList movies={movies} faves={faves} toggleFavorite={toggleFavorite} />
+          <FavesList ids={faves} toggleFavorite={toggleFavorite} />
         </Route>
 
         <Redirect to="/" />

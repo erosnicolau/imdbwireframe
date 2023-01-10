@@ -35,7 +35,9 @@ export const searchMovies = async (query, page) => {
 };
 
 export const getMovieById = async (movieId) => {
-  const response = await fetch(`${baseUrl}/movie/${movieId}`, {
+  const params = new URLSearchParams();
+  params.append('api_key', apiKey);
+  const response = await fetch(`${baseUrl}/movie/${movieId}?${params}`, {
     method: 'GET',
     headers: {'Content-Type': 'application/json'},
     params: {

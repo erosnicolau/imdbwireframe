@@ -12,6 +12,7 @@ export default function MovieList(props) {
           key={movie.id} 
           id={movie.id} 
           title={movie.title} 
+          releaseDate={movie.release_date}
           poster={movie.poster_path} 
           isFavorite={faves.includes(movie.id)}
           toggleFavorite={toggleFavorite}

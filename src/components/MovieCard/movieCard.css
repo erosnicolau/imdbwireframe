@@ -33,3 +33,8 @@ h1 { font-size: 1rem;}
 .fave.faved:before {
     content: '\2665'
 }
+
+.releaseDate {
+    font-size: .75rem;
+    color: gray;
+}
