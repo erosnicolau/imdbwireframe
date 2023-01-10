@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+# Demo TMDB React app
+
+This project was created by the author as a Tech Assignment test.
+
+### Installation steps:
+1. Create a folter for your install. Name it appropriately.
+2. Open up a Console of your choice
+3. Clone the repository with:
+	`git clone git@github.com:erosnicolau/imdbwireframe.git`
+4. CD into the newly cloned folder
+5. Install the dependencies with:
+	`npm install`
+6. Run the project with:
+	`npm start`
+
+*The following is the standard create-react-app .md file contents, feel free to delete:*
+===
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
