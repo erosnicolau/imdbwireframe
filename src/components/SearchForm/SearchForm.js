@@ -2,7 +2,7 @@ import './searchForm.css';
 import { createRef, useEffect }  from 'react';
 
 export default function SearchForm(props) {
-  const { keyword, saveSearch } = props;
+  const { keyword, saveSearch, visible } = props;
   let inputRef = createRef();
 
   function submitted(ev) {
@@ -20,7 +20,7 @@ export default function SearchForm(props) {
   }, [keyword, inputRef]);
 
   return (
-    <section className="searchBar">
+    <section className={'searchBar' +  (visible ? '' : ' hidden')}>
       <form onSubmit={submitted}>
         <input
           type="text"

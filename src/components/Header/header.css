@@ -23,7 +23,6 @@ h1 > a {
 }
 .navbar {
   flex-basis: 65vw;
-  text-align: center;
 }
 
 @media (min-width: 600px) {
