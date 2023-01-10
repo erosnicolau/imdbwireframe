@@ -1,6 +1,6 @@
 .head {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   background-color: #111;
   color: #fff;
   display: flex;
@@ -12,11 +12,16 @@
   left: -2rem;
 }
 .head > h1 {
-  flex-basis: 38vw;
+  flex-basis: 30vw;
   flex-grow: 0;
   flex-shrink: 1;
+  font-size: 2rem;
 }
 h1 > a {
   color: #fff;
   text-decoration: none;
+}
+.navbar {
+  flex-basis: 35vw;
+  text-align: center;
 }

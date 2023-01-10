@@ -1,5 +1,5 @@
-import React from 'react';
-import { createRef, useEffect } from 'react';
+import './searchForm.css';
+import { createRef, useEffect }  from 'react';
 
 export default function SearchForm(props) {
   const { keyword, saveSearch } = props;
@@ -32,7 +32,7 @@ export default function SearchForm(props) {
         <button type="submit" className="searchBtn" name="searchBtn">
           Search
         </button>
-        <button type="submit" className="searchBtn" name="resetBtn" onClick={resetSearchForm}>
+        <button type="reset" className="searchBtn" name="resetBtn" onClick={resetSearchForm}>
           Reset
         </button>
       </form>

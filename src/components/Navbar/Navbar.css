@@ -7,5 +7,6 @@
 }
 
 .nav-link.active {
-    color: lightblue;
+    color: #282c34;
+    background: white;
 }

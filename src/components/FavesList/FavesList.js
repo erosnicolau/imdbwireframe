@@ -31,18 +31,21 @@ export default function FavesList(props) {
   }
 
   return (
-    <div className='favesList'>
-      {favesMovies.map(movie => (
-        <MovieCard 
-          key={movie.id} 
-          id={movie.id} 
-          title={movie.title}
-          releaseDate={movie.release_date}
-          poster={movie.poster_path} 
-          isFavorite={ids.includes(movie.id)}
-          toggleFavorite={toggleFavorite}
-        />
-      ))}
+    <div className='favesWrapper'>
+      {ids.length === 0 && <p>You have no Favorites currently saved!</p>}
+      <div className='favesList'>
+        {favesMovies.map(movie => (
+          <MovieCard 
+            key={movie.id} 
+            id={movie.id} 
+            title={movie.title}
+            releaseDate={movie.release_date}
+            poster={movie.poster_path} 
+            isFavorite={ids.includes(movie.id)}
+            toggleFavorite={toggleFavorite}
+          />
+        ))}
+      </div>
     </div>
   )
 }

@@ -6,7 +6,6 @@ import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 export default function Main(props) {
-  //const { pathname } = useLocation();
   const { keyword } = props;
   const [movies, setMovies] = useState([]);
   const [faves, setFaves] = useState(JSON.parse(localStorage.getItem('favoriteIds')) || []);
