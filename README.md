@@ -3,7 +3,7 @@
 This project was created by the author as a Tech Assignment test.
 
 ### Installation steps:
-1. Create a folter for your install. Name it appropriately.
+1. Create a folder for your install. Name it appropriately.
 2. Open up a Console of your choice
 3. Clone the repository with:
 	`git clone git@github.com:erosnicolau/imdbwireframe.git`
